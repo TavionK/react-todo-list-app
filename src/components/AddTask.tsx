@@ -1,8 +1,6 @@
 import { Plus } from "lucide-react";
-
-import { type Dispatch, type SetStateAction, useState } from "react";
-
 import { type Task, addTask } from "../utils/tasks.ts";
+import { type Dispatch, type SetStateAction, useState } from "react";
 
 interface AddTaskProps {
   setTask: Dispatch<SetStateAction<Task[]>>;
