@@ -31,7 +31,7 @@ export default function AddTask({ setTask }: AddTaskProps) {
         placeholder="Add Item..."
         className="border-2 border-purple-600 rounded-md w-full p-2"
       />
-      <button className="bg-purple-600 p-2 text-black rounded-md ml-2">
+      <button className="bg-purple-600 p-2 text-black rounded-md ml-2 cursor-pointer hover:bg-purple-700 transition-colors duration-200 ease-in-out">
         <Plus className="size-4" strokeWidth={3} />
       </button>
     </form>
