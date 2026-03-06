@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-// Component Imports
 import Header from "./components/Header";
 import AddTask from "./components/AddTask";
+import type { Task } from "./utils/tasks.ts";
 
 function App() {
-  const [tasks, setTask] = useState([]);
+  const [tasks, setTask] = useState<Task[]>([]);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
