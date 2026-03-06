@@ -1,15 +1,15 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import "./App.css";
+import { useState } from "react";
+// Component Imports
 import Header from "./components/Header";
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const [tasks, setTask] = useState([]);
 
   return (
     <>
-      <Header />
+      <main className="max-w-lg mx-auto px-4 mt-10">
+        <Header taskCount={tasks.length} />
+      </main>
     </>
   );
 }
