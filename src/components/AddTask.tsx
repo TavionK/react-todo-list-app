@@ -1,5 +1,7 @@
 import { Plus } from "lucide-react";
-import type { Dispatch, SetStateAction } from "react";
+
+import { type Dispatch, type SetStateAction, useState } from "react";
+
 import { type Task, addTask } from "../utils/tasks.ts";
 
 interface AddTaskProps {
@@ -7,23 +9,25 @@ interface AddTaskProps {
 }
 
 export default function AddTask({ setTask }: AddTaskProps) {
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    const newTask = {
-      id: crypto.randomUUID(),
-      text: e.target[0].value,
-      isComplete: false,
-    };
-    setTask((prevTask: Task[]) => addTask(prevTask, newTask));
-    e.target[0].value = "";
-  };
+  const [inputValue, setInputValue] = useState("");
 
   return (
     <form
-      onSubmit={handleSubmit}
+      onSubmit={(e) => {
+        e.preventDefault();
+        const newTask = {
+          id: crypto.randomUUID(),
+          text: inputValue,
+          isComplete: false,
+        };
+        setTask((prevTask: Task[]) => addTask(prevTask, newTask));
+        setInputValue("");
+      }}
       className="flex justify-between items-center gap-4 mt-10"
     >
       <input
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
         required
         type="text"
         placeholder="Add Item..."
