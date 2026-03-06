@@ -5,8 +5,12 @@ import TodoList from "./components/TodoList.tsx";
 import type { Task } from "./utils/tasks.ts";
 
 function App() {
-  const [tasks, setTask] = useState<Task[]>([]);
+  const [tasks, setTask] = useState<Task[]>(() => {
+    const storedTasks: string | null = localStorage.getItem("tasks");
+    return storedTasks ? JSON.parse(storedTasks) : [];
+  });
 
+  // Saves the list to local storage whenever the tasks array changes
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
