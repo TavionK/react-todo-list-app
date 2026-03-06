@@ -21,7 +21,7 @@ function App() {
         />
         <AddTask setTask={setTask} />
         <hr className="my-8 border-gray-600" />
-        <TodoList totalTasks={tasks.length} tasks={tasks} />
+        <TodoList tasks={tasks} setTask={setTask} />
       </main>
     </>
   );
