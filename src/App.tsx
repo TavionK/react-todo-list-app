@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import AddTask from "./components/AddTask";
+import TodoList from "./components/TodoList.tsx";
 import type { Task } from "./utils/tasks.ts";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         />
         <AddTask setTask={setTask} />
         <hr className="my-8 border-gray-600" />
+        <TodoList totalTasks={tasks.length} />
       </main>
     </>
   );
