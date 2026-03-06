@@ -13,7 +13,11 @@ function App() {
   return (
     <>
       <main className="max-w-lg mx-auto px-4 mt-10">
-        <Header taskCount={tasks.length} />
+        <Header
+          completeTaskCount={
+            tasks.filter((task: Task): boolean => !task.isComplete).length
+          }
+        />
         <AddTask setTask={setTask} />
       </main>
     </>

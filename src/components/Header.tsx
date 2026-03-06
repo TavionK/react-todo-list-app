@@ -1,10 +1,10 @@
 import { SquareCheck } from "lucide-react";
 
 interface HeaderProps {
-  taskCount: number;
+  completeTaskCount: number;
 }
 
-export default function Header({ taskCount }: HeaderProps) {
+export default function Header({ completeTaskCount }: HeaderProps) {
   return (
     <>
       <h1>
@@ -17,7 +17,7 @@ export default function Header({ taskCount }: HeaderProps) {
         TODO List
       </h1>
       <p className="text-gray-500 text-xs mt-2 uppercase">
-        {taskCount} tasks remaining
+        {completeTaskCount} tasks remaining
       </p>
     </>
   );
