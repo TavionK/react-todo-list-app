@@ -14,7 +14,6 @@ export default function AddTask({ setTask }: AddTaskProps) {
       text: e.target[0].value,
       isComplete: false,
     };
-    console.log("submitted");
     setTask((prevTask: Task[]) => addTask(prevTask, newTask));
     e.target[0].value = "";
   };
