@@ -10,14 +10,22 @@ interface HeaderProps {
 export default function Header({ completeTaskCount }: HeaderProps) {
   const heading: RefObject<null> = useRef(null);
   const icon: RefObject<null> = useRef(null);
-  const subTxt: RefObject<null> = useRef(null);
+  const subHeading: RefObject<null> = useRef(null);
 
   useEffect((): void => {
     const tl: gsap.core.Timeline = gsap.timeline();
     const split = new SplitText(heading.current, { type: "chars" });
-    const splitP = new SplitText(subTxt.current, { type: "chars" });
+    const splitSubHeading = new SplitText(subHeading.current, {
+      type: "chars",
+    });
 
     tl.from(split.chars, { opacity: 0, y: 20, stagger: 0.05, duration: 0.6 });
+    tl.from(splitSubHeading.chars, {
+      opacity: 0,
+      y: 20,
+      stagger: 0.05,
+      duration: 0.6,
+    });
     tl.from(".lucide-square-check", {
       opacity: 0,
       y: -100,
@@ -25,7 +33,6 @@ export default function Header({ completeTaskCount }: HeaderProps) {
       delay: 1,
       ease: "bounce.out(1.5)",
     });
-    tl.from(splitP.chars, { opacity: 0, y: 20, stagger: 0.05, duration: 0.6 });
   }, []);
 
   return (
@@ -41,7 +48,7 @@ export default function Header({ completeTaskCount }: HeaderProps) {
         <br />
         TODO List
       </h1>
-      <p ref={subTxt} className="text-gray-500 text-xs mt-2 uppercase">
+      <p ref={subHeading} className="text-gray-500 text-xs mt-2 uppercase">
         {completeTaskCount} tasks remaining
       </p>
     </>
