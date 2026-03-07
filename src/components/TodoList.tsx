@@ -15,9 +15,15 @@ export default function TodoList({ tasks, setTask }: TodoListProps) {
       </p>
       <section aria-label="Todo List" className="mt-8">
         <ul className="space-y-4">
-          {tasks.map((task: Task) => {
-            return <ListItem key={task.id} listItem={task} setTask={setTask} />;
-          })}
+          {tasks.length === 0 ? (
+            <p className="text-gray-600 text-center text-lg translate-y-10">
+              No tasks, add one above.
+            </p>
+          ) : (
+            tasks.map((task: Task) => (
+              <ListItem key={task.id} listItem={task} setTask={setTask} />
+            ))
+          )}
         </ul>
       </section>
     </>
