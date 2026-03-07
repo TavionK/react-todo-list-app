@@ -28,7 +28,7 @@ export default function Header({ completeTaskCount }: HeaderProps) {
     });
     tl.from(".lucide-square-check", {
       opacity: 0,
-      y: -100,
+      y: -50,
       duration: 0.6,
       delay: 1,
       ease: "bounce.out(1.5)",
