@@ -31,6 +31,7 @@ export default function Header({ completeTaskCount }: HeaderProps) {
         Simple{" "}
         <span ref={icon} className="inline">
           <SquareCheck
+            aria-hidden="true"
             className="text-purple-600 inline size-7 -translate-y-1"
             strokeWidth={2.5}
           />
