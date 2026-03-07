@@ -39,7 +39,7 @@ export default function Header({ completeTaskCount }: HeaderProps) {
         TODO List
       </h1>
 
-      <p className="text-gray-500 text-xs mt-2 uppercase">
+      <p aria-live="polite" className="text-gray-500 text-xs mt-2 uppercase">
         {completeTaskCount} tasks remaining
       </p>
     </>
