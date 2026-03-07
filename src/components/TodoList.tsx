@@ -19,15 +19,17 @@ export default function TodoList({ tasks, setTask }: TodoListProps) {
 
   return (
     <>
-      <p className="text-gray-500 text-xs mt-2 uppercase">
-        {tasks.length} total {tasks.length === 1 ? "task" : "tasks"} |{" "}
-        <span
+      <div className="text-gray-500 text-xs mt-2 uppercase flex justify-start gap-1">
+        <p aria-live="polite">
+          {tasks.length} total {tasks.length === 1 ? "task" : "tasks"} |
+        </p>
+        <button
           onClick={handleClearCompleted}
           className="cursor-pointer border-b border-b-purple-700/0  hover:text-purple-700 hover:border-b-purple-700 transition-colors duration-300 ease-in-out"
         >
           Clear Complete
-        </span>
-      </p>
+        </button>
+      </div>
       <section aria-label="Todo List" className="mt-8">
         <ul className="space-y-4">
           {tasks.length === 0 ? (
