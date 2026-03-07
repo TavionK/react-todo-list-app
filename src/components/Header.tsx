@@ -10,22 +10,12 @@ interface HeaderProps {
 export default function Header({ completeTaskCount }: HeaderProps) {
   const heading: RefObject<null> = useRef(null);
   const icon: RefObject<null> = useRef(null);
-  const subHeading: RefObject<null> = useRef(null);
 
   useEffect((): void => {
-    const tl: gsap.core.Timeline = gsap.timeline();
     const split = new SplitText(heading.current, { type: "chars" });
-    const splitSubHeading = new SplitText(subHeading.current, {
-      type: "chars",
-    });
+    const tl: gsap.core.Timeline = gsap.timeline();
 
-    tl.from(split.chars, { opacity: 0, y: 20, stagger: 0.05, duration: 0.6 });
-    tl.from(splitSubHeading.chars, {
-      opacity: 0,
-      y: 20,
-      stagger: 0.05,
-      duration: 0.6,
-    });
+    tl.from(split.chars, { opacity: 0, y: 10, stagger: 0.05, duration: 0.6 });
     tl.from(".lucide-square-check", {
       opacity: 0,
       y: -50,
@@ -48,7 +38,8 @@ export default function Header({ completeTaskCount }: HeaderProps) {
         <br />
         TODO List
       </h1>
-      <p ref={subHeading} className="text-gray-500 text-xs mt-2 uppercase">
+
+      <p className="text-gray-500 text-xs mt-2 uppercase">
         {completeTaskCount} tasks remaining
       </p>
     </>
