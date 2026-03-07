@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+
 import Header from "./components/Header";
 import AddTask from "./components/AddTask";
 import TodoList from "./components/TodoList.tsx";
 import type { Task } from "./utils/tasks.ts";
+
+gsap.registerPlugin(SplitText);
 
 function App() {
   const [tasks, setTask] = useState<Task[]>(() => {
