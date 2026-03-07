@@ -23,12 +23,9 @@ export default function AddTask({ setTask }: AddTaskProps) {
       }}
       className="flex justify-between items-center gap-4 mt-10"
     >
-      <label htmlFor="inputBox" className="sr-only">
-        Input Task
-      </label>
+      <label htmlFor="inputBox" className="sr-only"></label>
       <input
         id="inputBox"
-        aria-label="Input todo item"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         required
