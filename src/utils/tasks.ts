@@ -20,3 +20,7 @@ export function toggleTask(tasksArr: Task[], taskItem: Task) {
     return task;
   });
 }
+
+export function deleteCompletedTasks(tasksArr: Task[]) {
+  return tasksArr.filter((task: Task) => !task.isComplete);
+}
