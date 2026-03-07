@@ -31,7 +31,7 @@ export default function Header({ completeTaskCount }: HeaderProps) {
         Simple{" "}
         <span ref={icon} className="inline">
           <SquareCheck
-            className="text-purple-600 inline size-7 -translate-y-0.5"
+            className="text-purple-600 inline size-7 -translate-y-1"
             strokeWidth={2.5}
           />
         </span>
