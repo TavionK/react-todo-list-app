@@ -23,7 +23,12 @@ export default function AddTask({ setTask }: AddTaskProps) {
       }}
       className="flex justify-between items-center gap-4 mt-10"
     >
+      <label htmlFor="inputBox" className="sr-only">
+        Input todo item
+      </label>
       <input
+        id="inputBox"
+        aria-label="Input todo item"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         required
@@ -31,7 +36,10 @@ export default function AddTask({ setTask }: AddTaskProps) {
         placeholder="Add Item..."
         className="border-2 border-purple-600 rounded-md w-full p-2"
       />
-      <button className="bg-purple-600 p-2 text-black rounded-md ml-2 cursor-pointer hover:bg-purple-700 transition-colors duration-200 ease-in-out">
+      <button
+        aria-label="Add Item"
+        className="bg-purple-600 p-2 text-black rounded-md ml-2 cursor-pointer hover:bg-purple-700 transition-colors duration-200 ease-in-out"
+      >
         <Plus className="size-4" strokeWidth={3} />
       </button>
     </form>
