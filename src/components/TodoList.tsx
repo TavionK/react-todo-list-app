@@ -1,7 +1,7 @@
 import type { Task } from "../utils/tasks.ts";
 import ListItem from "./ListItem.tsx";
 import type { Dispatch, SetStateAction } from "react";
-import { clearAllTasks } from "../utils/tasks.ts";
+import { clearAllTasks, deleteCompletedTasks } from "../utils/tasks.ts";
 
 interface TodoListProps {
   tasks: Task[];
@@ -10,11 +10,10 @@ interface TodoListProps {
 
 export default function TodoList({ tasks, setTask }: TodoListProps) {
   function handleClearCompleted() {
-    console.log("Clearing completed tasks");
+    setTask(deleteCompletedTasks(tasks));
   }
 
   function handleClearAll() {
-    console.log("Clear All");
     setTask(clearAllTasks);
   }
 
