@@ -21,18 +21,16 @@ function App() {
   }, [tasks]);
 
   return (
-    <>
-      <main className="max-w-lg mx-auto px-4 mt-10">
-        <Header
-          completeTaskCount={
-            tasks.filter((task: Task): boolean => !task.isComplete).length
-          }
-        />
-        <AddTask setTask={setTask} />
-        <hr className="my-8 border-gray-600" />
-        <TodoList tasks={tasks} setTask={setTask} />
-      </main>
-    </>
+    <main className="max-w-lg mx-auto px-4 mt-10">
+      <Header
+        completeTaskCount={
+          tasks.filter((task: Task): boolean => !task.isComplete).length
+        }
+      />
+      <AddTask setTask={setTask} />
+      <hr className="my-8 border-gray-600" />
+      <TodoList tasks={tasks} setTask={setTask} />
+    </main>
   );
 }
 
