@@ -25,6 +25,9 @@ A clean, minimal task manager built with React and TypeScript, featuring smooth 
 
 [tavion-todo-list-app.netlify.app](https://tavion-todo-list-app.netlify.app)
 
+## Screenshots
+![Screenshot of the app](./public/screenshot.png)
+
 ## Project Structure
 
 ```
