@@ -23,7 +23,9 @@ export default function AddTask({ setTask }: AddTaskProps) {
       }}
       className="flex justify-between items-center gap-4 mt-10"
     >
-      <label htmlFor="inputBox" className="sr-only"></label>
+      <label htmlFor="inputBox" className="sr-only">
+        Input Task
+      </label>
       <input
         id="inputBox"
         value={inputValue}

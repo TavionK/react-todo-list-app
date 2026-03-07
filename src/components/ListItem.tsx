@@ -16,11 +16,14 @@ export default function ListItem({ listItem, setTask }: ListItemProps) {
   return (
     <li className="bg-gray-800 rounded-md py-2 px-4 flex justify-between items-center">
       <div className="flex items-center">
+        <label htmlFor={`${listItem.id}`} className="sr-only">
+          Toggle {listItem.text} Completion
+        </label>
         <input
           onChange={() => {
             setTask((prevTask: Task[]) => toggleTask(prevTask, listItem));
           }}
-          aria-label={`Toggle ${listItem.text} completion`}
+          id={`${listItem.id}`}
           type="checkbox"
           className="mr-2 "
           checked={listItem.isComplete}
