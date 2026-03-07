@@ -21,6 +21,10 @@ A clean, minimal task manager built with React and TypeScript, featuring smooth 
 - Persistent storage via `localStorage` — tasks survive page refreshes
 - GSAP-powered heading animation on initial load
 
+## Live Demo
+
+[tavion-todo-list-app.netlify.app](https://tavion-todo-list-app.netlify.app)
+
 ## Project Structure
 
 ```
@@ -48,6 +52,3 @@ npm run dev
 npm run build
 ```
 
-## Live Demo
-
-[tavion-todo-list-app.netlify.app](https://tavion-todo-list-app.netlify.app)
