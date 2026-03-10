@@ -25,7 +25,7 @@ export default function ListItem({ listItem, setTask }: ListItemProps) {
           }}
           id={`${listItem.id}`}
           type="checkbox"
-          className="mr-2 "
+          className="appearance-none border border-gray-500 rounded-sm mr-2 checked:bg-purple-700 checked:border-transparent size-4"
           checked={listItem.isComplete}
         ></input>
         {listItem.text}
