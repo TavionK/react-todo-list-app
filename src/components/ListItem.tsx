@@ -14,7 +14,7 @@ export default function ListItem({ listItem, setTask }: ListItemProps) {
   }
 
   return (
-    <li className="bg-gray-800 rounded-md py-2 px-4 flex justify-between items-center">
+    <li className="bg-gray-800 rounded-md py-2 px-4 flex justify-between items-center text-lg">
       <div className="flex items-center">
         <label htmlFor={`${listItem.id}`} className="sr-only">
           Toggle {listItem.text} Completion
