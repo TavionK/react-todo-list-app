@@ -7,7 +7,7 @@
     }
 
     h1 {
-        @apply text-3xl text-left font-bold font-serif tracking-wide;
+        @apply text-4xl text-left font-bold font-serif tracking-wide;
     }
 }
 

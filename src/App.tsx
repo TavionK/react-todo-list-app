@@ -21,7 +21,7 @@ function App() {
   }, [tasks]);
 
   return (
-    <main className="max-w-lg mx-auto px-4 mt-10">
+    <main className="max-w-3xl mx-auto px-4 pt-16">
       <Header
         completeTaskCount={
           tasks.filter((task: Task): boolean => !task.isComplete).length
