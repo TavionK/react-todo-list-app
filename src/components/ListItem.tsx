@@ -19,7 +19,7 @@ export default function ListItem({ listItem, setTask }: ListItemProps) {
     <li className="bg-gray-800 rounded-md py-2 px-4 flex justify-between items-center text-lg">
       <div className="flex items-center">
         <Checkbox.Root
-          className="flex items-center justify-center size-5 rounded-md appearance-none  bg-gray-800 outline-none border border-gray-500 data-[state=checked]:bg-purple-700 data-[state=checked]:border-purple-700 cursor-pointer mr-2"
+          className="flex items-center justify-center size-5 rounded-md appearance-none  bg-gray-800 outline-none border border-gray-500 data-[state=checked]:bg-purple-700 data-[state=checked]:border-purple-700 cursor-pointer mr-4"
           checked={listItem.isComplete}
           aria-label={`Toggle ${listItem.text} Completion`}
           id={`${listItem.id}`}
@@ -31,7 +31,11 @@ export default function ListItem({ listItem, setTask }: ListItemProps) {
             <CheckIcon />
           </Checkbox.Indicator>
         </Checkbox.Root>
-        {listItem.text}
+        {!listItem.isComplete ? (
+          <p>{listItem.text}</p>
+        ) : (
+          <p className="line-through text-gray-600">{listItem.text}</p>
+        )}
       </div>
       <button
         aria-label={`Delete ${listItem.text}`}
