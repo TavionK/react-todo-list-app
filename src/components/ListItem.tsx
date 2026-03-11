@@ -2,6 +2,8 @@ import type { Task } from "../utils/tasks.ts";
 import { Trash2 } from "lucide-react";
 import { deleteTask, toggleTask } from "../utils/tasks.ts";
 import type { Dispatch, SetStateAction } from "react";
+import { Checkbox } from "radix-ui";
+import { CheckIcon } from "@radix-ui/react-icons";
 
 interface ListItemProps {
   listItem: Task;
@@ -16,18 +18,19 @@ export default function ListItem({ listItem, setTask }: ListItemProps) {
   return (
     <li className="bg-gray-800 rounded-md py-2 px-4 flex justify-between items-center text-lg">
       <div className="flex items-center">
-        <label htmlFor={`${listItem.id}`} className="sr-only">
-          Toggle {listItem.text} Completion
-        </label>
-        <input
-          onChange={() => {
+        <Checkbox.Root
+          className="flex items-center justify-center size-5 rounded-md appearance-none  bg-gray-800 outline-none border border-gray-500 data-[state=checked]:bg-purple-700 data-[state=checked]:border-purple-700 cursor-pointer mr-2"
+          checked={listItem.isComplete}
+          aria-label={`Toggle ${listItem.text} Completion`}
+          id={`${listItem.id}`}
+          onCheckedChange={() => {
             setTask((prevTask: Task[]) => toggleTask(prevTask, listItem));
           }}
-          id={`${listItem.id}`}
-          type="checkbox"
-          className="appearance-none border border-gray-500 rounded-sm mr-2 checked:bg-purple-700 checked:border-transparent size-4"
-          checked={listItem.isComplete}
-        ></input>
+        >
+          <Checkbox.Indicator className="flex items-center justify-center text-white">
+            <CheckIcon />
+          </Checkbox.Indicator>
+        </Checkbox.Root>
         {listItem.text}
       </div>
       <button
