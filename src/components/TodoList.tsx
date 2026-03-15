@@ -24,10 +24,10 @@ export default function TodoList({ tasks, setTask }: TodoListProps) {
           {tasks.length} total {tasks.length === 1 ? "task" : "tasks"} |
         </p>
         <button
-          onClick={handleClearCompleted}
+          onClick={handleClearAll}
           className="cursor-pointer border-b border-b-purple-700/0 underline md:no-underline hover:text-purple-700 hover:border-b-purple-700 transition-colors duration-300 ease-in-out"
         >
-          Clear Complete
+          Clear All
         </button>
       </div>
       <section aria-label="Todo List" className="mt-8">
@@ -46,10 +46,10 @@ export default function TodoList({ tasks, setTask }: TodoListProps) {
       {tasks.length > 0 && (
         <div className="flex justify-center mt-8">
           <button
-            onClick={handleClearAll}
+            onClick={handleClearCompleted}
             className="bg-purple-600 px-2 py-1 rounded-md cursor-pointer hover:bg-purple-700 transition-colors duration-200 ease-in-out"
           >
-            Clear All
+            Clear Completed
           </button>
         </div>
       )}
