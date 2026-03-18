@@ -9,12 +9,13 @@ A clean, minimal task manager built with React and TypeScript, featuring smooth 
 - **Vite** – Fast dev server and build tooling
 - **Tailwind CSS v4** – Utility-first styling with a dark theme
 - **GSAP + SplitText** – Animated text and icon entrance on load
+- **Radix UI** – Accessible, unstyled checkbox primitive
 - **Lucide React** – Lightweight icon set
 
 ## Features
 
 - Add tasks with input validation
-- Mark tasks as complete via checkbox
+- Mark tasks as complete via accessible Radix UI checkbox primitive
 - Delete individual tasks
 - Clear all completed tasks at once
 - Clear all tasks with a single button
@@ -47,10 +48,10 @@ src/
 ```bash
 # Install dependencies
 npm install
-
+ 
 # Run dev server
 npm run dev
-
+ 
 # Build for production
 npm run build
 ```
