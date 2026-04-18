@@ -24,7 +24,7 @@ export default function ListItem({ listItem, setTask }: ListItemProps) {
               setTask((prevTask: Task[]) => toggleTask(prevTask, listItem));
             }
           }}
-          className="flex items-center justify-center size-5 shrink-0 rounded-md appearance-none  bg-gray-100 outline-none border border-gray-500 data-[state=checked]:bg-purple-700 data-[state=checked]:border-purple-700 cursor-pointer a11y-rings"
+          className="flex items-center justify-center size-5 shrink-0 rounded-md appearance-none  bg-gray-100 outline-none border border-gray-500 data-[state=checked]:bg-purple-600 data-[state=checked]:border-purple-700 cursor-pointer a11y-rings"
           checked={listItem.isComplete}
           aria-label={`Toggle ${listItem.text} Completion`}
           id={`${listItem.id}`}
