@@ -19,7 +19,12 @@ export default function ListItem({ listItem, setTask }: ListItemProps) {
     <li className="bg-gray-300 border border-gray-400 rounded-md py-2 px-4 flex justify-between items-center text-lg">
       <div className="flex items-center gap-4">
         <Checkbox.Root
-          className="flex items-center justify-center size-5 shrink-0 rounded-md appearance-none  bg-gray-100 outline-none border border-gray-500 data-[state=checked]:bg-purple-700 data-[state=checked]:border-purple-700 cursor-pointer"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              setTask((prevTask: Task[]) => toggleTask(prevTask, listItem));
+            }
+          }}
+          className="flex items-center justify-center size-5 shrink-0 rounded-md appearance-none  bg-gray-100 outline-none border border-gray-500 data-[state=checked]:bg-purple-700 data-[state=checked]:border-purple-700 cursor-pointer a11y-rings"
           checked={listItem.isComplete}
           aria-label={`Toggle ${listItem.text} Completion`}
           id={`${listItem.id}`}
