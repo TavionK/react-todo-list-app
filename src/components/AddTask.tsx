@@ -37,7 +37,7 @@ export default function AddTask({ setTask }: AddTaskProps) {
       />
       <button
         aria-label="Add Item"
-        className="bg-purple-600 p-2 text-white rounded-md cursor-pointer hover:bg-purple-700 transition-colors duration-200 ease-in-out size-10 flex items-center justify-center shrink-0"
+        className="bg-purple-600 p-2 text-white rounded-md cursor-pointer hover:bg-purple-700 transition-colors duration-200 ease-in-out size-10 flex items-center justify-center shrink-0 a11y-rings"
       >
         <Plus className="size-5" strokeWidth={3} />
       </button>
