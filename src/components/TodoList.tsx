@@ -25,7 +25,7 @@ export default function TodoList({ tasks, setTask }: TodoListProps) {
         </p>
         <button
           onClick={handleClearAll}
-          className="cursor-pointer border-b border-b-purple-700/0 underline md:no-underline hover:text-purple-700 hover:border-b-purple-700 transition-colors duration-300 ease-in-out a11y-rings rounded-xs"
+          className="cursor-pointer underline hover:text-purple-700 hover:decoration-purple-700 transition-colors duration-300 ease-in-out a11y-rings focus-visible:no-underline rounded-xs"
         >
           Clear All
         </button>
