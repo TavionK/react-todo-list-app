@@ -12,7 +12,7 @@
 
 @layer components {
     .a11y-rings {
-        @apply focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600;
+        @apply focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-purple-600 outline-none;
     }
 }
 
