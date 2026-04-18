@@ -47,7 +47,7 @@ export default function TodoList({ tasks, setTask }: TodoListProps) {
         <div className="flex justify-center mt-8">
           <button
             onClick={handleClearCompleted}
-            className="bg-purple-600 px-2 py-1 rounded-md cursor-pointer hover:bg-purple-700 transition-colors duration-200 ease-in-out"
+            className="text-white bg-purple-600 px-2 py-1 rounded-md cursor-pointer hover:bg-purple-700 transition-colors duration-200 ease-in-out"
           >
             Clear Completed
           </button>
