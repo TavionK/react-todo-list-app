@@ -44,12 +44,14 @@ export default function ListItem({ listItem, setTask }: ListItemProps) {
       </div>
       <button
         aria-label={`Delete ${listItem.text}`}
-        className="group rounded-md cursor-pointer p-2"
+        className="group rounded-md cursor-pointer p-2  focus-visible:outline-red-500 focus-visible:outline-2"
         onClick={handleDelete}
       >
         <Trash2
           strokeWidth={2}
-          className="size-4 text-gray-600 cursor-pointer group-focus-visible:text-red-500 group-hover:text-red-500 transition-colors duration-200 ease-in-out"
+          className="size-4 text-gray-600 cursor-pointer
+          group-focus-visible:text-red-500 group-hover:text-red-500 outline-none
+          transition-colors duration-200 ease-in-out"
         />
       </button>
     </li>
