@@ -28,6 +28,7 @@ A clean, minimal task manager built with React and TypeScript, featuring smooth 
 
 ## Screenshots
 ![Screenshot of the app](./public/screenshot.png)
+<img src="./public/screenshot.png" width="50%" alt="Screenshot of the app>
 
 ## Project Structure
 
