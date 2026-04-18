@@ -25,7 +25,7 @@ export default function TodoList({ tasks, setTask }: TodoListProps) {
         </p>
         <button
           onClick={handleClearAll}
-          className="cursor-pointer border-b border-b-purple-700/0 underline md:no-underline hover:text-purple-700 hover:border-b-purple-700 transition-colors duration-300 ease-in-out"
+          className="cursor-pointer border-b border-b-purple-700/0 underline md:no-underline hover:text-purple-700 hover:border-b-purple-700 transition-colors duration-300 ease-in-out a11y-rings rounded-xs"
         >
           Clear All
         </button>
@@ -47,7 +47,7 @@ export default function TodoList({ tasks, setTask }: TodoListProps) {
         <div className="flex justify-center mt-8">
           <button
             onClick={handleClearCompleted}
-            className="text-white bg-purple-600 px-2 py-1 rounded-md cursor-pointer hover:bg-purple-700 transition-colors duration-200 ease-in-out"
+            className="text-white bg-purple-600 px-3 py-2 rounded-md cursor-pointer hover:bg-purple-700 transition-colors duration-200 ease-in-out a11y-rings tracking-wide"
           >
             Clear Completed
           </button>
