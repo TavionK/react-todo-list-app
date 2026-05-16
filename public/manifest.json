@@ -1,0 +1,16 @@
+{
+  "name": "Simple TODO List",
+  "short_name": "TODO",
+  "description": "A simple todo list app",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#9333ea",
+  "icons": [
+    {
+      "src": "/todo_app_icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
